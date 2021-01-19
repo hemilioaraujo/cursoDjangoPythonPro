@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
+{% extends 'base/base.html' %}
+{% load static %}
 
-	<h1>Vídeo Aperitivo: Motivação</h1>
+{% block title %}Python Pro Vídeo{% endblock title %}
+{% block description %}Página de vídeo{% endblock description %}
 
-	<iframe src="https://player.vimeo.com/video/498736189" width="640" height="360" frameborder="0"
+{% block body %}
+	<h1 class="mt-4 mb-3">{{ video.titulo }}</h1>
+
+	<iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="360" frameborder="0"
 			allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-</body>
-</html>
+{% endblock body %}
