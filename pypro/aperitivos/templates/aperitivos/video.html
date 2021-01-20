@@ -5,7 +5,7 @@
 {% block description %}Página de vídeo{% endblock description %}
 
 {% block body %}
-	<h1 class="mt-4 mb-3">{{ video.titulo }}</h1>
+	<h1 class="mt-4 mb-3">{{ video.titulo | default:"Faltando Título"}}</h1>
 
 	<iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="360" frameborder="0"
 			allow="autoplay; fullscreen" allowfullscreen></iframe>
